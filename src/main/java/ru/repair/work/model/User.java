@@ -1,6 +1,7 @@
 package ru.repair.work.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -20,6 +21,9 @@ public class User {
 
     @Column
     private String kayCode;
+
+    @OneToMany
+    private List<Flat> flats;
 
     public long getId() {
         return id;
@@ -59,5 +63,13 @@ public class User {
 
     public void setKayCode(String kayCode) {
         this.kayCode = kayCode;
+    }
+
+    public List<Flat> getFlats() {
+        return flats;
+    }
+
+    public void setFlats(List<Flat> flats) {
+        this.flats = flats;
     }
 }
