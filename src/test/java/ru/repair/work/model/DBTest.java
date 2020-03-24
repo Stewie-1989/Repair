@@ -39,7 +39,7 @@ public class DBTest {
         manager.getTransaction().begin();
         manager.persist(user);
         manager.getTransaction().commit();
-        Thread.sleep(50000);
+        Thread.sleep(120000);
 
     }
 }
